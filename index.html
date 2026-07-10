@@ -3,219 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Beauty Center | Estética de Precisión en Arganda del Rey</title>
+    <title>Royal Beauty Centre | Centro de Estética de Lujo en Madrid</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Descubre Royal Beauty Centre en Arganda del Rey. Tratamientos estéticos premium: manicura, limpieza facial, masajes y pestañas en un entorno de lujo y bienestar.">
+    <meta name="keywords" content="centro de estetica, manicura arganda, limpieza facial, masajes, pestañas, micropigmentacion, belleza madrid, royal beauty">
+    <meta name="author" content="Royal Beauty Centre">
     
-    <link rel="stylesheet" href="style.css">
-    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://royalbeautycentre.com/">
+    <meta property="og:title" content="Royal Beauty Centre | Centro de Estética de Lujo">
+    <meta property="og:description" content="Realza tu belleza con tratamientos profesionales y atención personalizada de primer nivel.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=32&q=80">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-cream text-darkGrey font-sans antialiased selection:bg-pastelPink selection:text-darkGrey">
+<body class="bg-[#FCFBF8] text-[#2E2E2E] font-['Inter'] antialiased overflow-x-hidden">
 
-    <header class="fixed top-0 left-0 w-full bg-cream/90 backdrop-blur-md z-50 border-b border-pastelPink/50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="font-serif text-xl md:text-2xl tracking-widest text-darkGrey hover:opacity-80 transition-opacity">
-                ROYAL <span class="text-goldAccent font-light">BEAUTY</span>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="font-['Playfair_Display'] text-2xl lg:text-3xl tracking-wide text-[#6B4F3A] font-semibold" aria-label="Royal Beauty Centre Inicio">
+                Royal Beauty <span class="text-[#355C7D] font-light">Centre</span>
             </a>
-
-            <nav class="hidden md:flex items-center space-x-10 text-sm tracking-widest font-medium uppercase">
-                <a href="#" class="hover:text-goldAccent transition-colors">Inicio</a>
-                <a href="#precios" class="hover:text-goldAccent transition-colors">Precios</a>
-                <a href="#reservar" class="hover:text-goldAccent transition-colors">Reservar</a>
-                <a href="#ubicacion" class="hover:text-goldAccent transition-colors">Ubicación</a>
-                <a href="#reservar" class="bg-goldAccent text-white px-5 py-2.5 rounded-sm hover:bg-darkGrey transition-all duration-300">Pedir Cita</a>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="text-sm tracking-wider uppercase hover:text-[#6B4F3A] transition-colors duration-200">Inicio</a>
+                <a href="#servicios" class="text-sm tracking-wider uppercase hover:text-[#6B4F3A] transition-colors duration-200">Tratamientos</a>
+                <a href="#galeria" class="text-sm tracking-wider uppercase hover:text-[#6B4F3A] transition-colors duration-200">Galería</a>
+                <a href="#elegirnos" class="text-sm tracking-wider uppercase hover:text-[#6B4F3A] transition-colors duration-200">Nosotros</a>
+                <a href="#contacto" class="text-sm tracking-wider uppercase hover:text-[#6B4F3A] transition-colors duration-200">Contacto</a>
+                <a href="#reservas" class="bg-[#6B4F3A] text-white px-6 py-2.5 text-xs tracking-widest uppercase hover:bg-[#355C7D] transition-colors duration-300 rounded-sm">Reservar Cita</a>
             </nav>
 
-            <button id="menu-btn" class="md:hidden text-darkGrey focus:outline-none p-2" aria-label="Abrir menú">
-                <i class="fa-solid fa-bars text-xl"></i>
+            <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 focus:outline-none z-50" aria-label="Abrir menú de navegación">
+                <span class="w-full h-0.5 bg-[#2E2E2E] transition-all duration-300 origin-left"></span>
+                <span class="w-full h-0.5 bg-[#2E2E2E] transition-all duration-300"></span>
+                <span class="w-full h-0.5 bg-[#2E2E2E] transition-all duration-300 origin-left"></span>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-pastelPink absolute top-20 left-0 w-full transition-all duration-300 ease-in-out">
-            <nav class="flex flex-col p-6 space-y-4 text-center text-sm tracking-widest font-medium uppercase">
-                <a href="#" class="mobile-link py-2 hover:text-goldAccent transition-colors">Inicio</a>
-                <a href="#precios" class="mobile-link py-2 hover:text-goldAccent transition-colors">Precios</a>
-                <a href="#reservar" class="mobile-link py-2 hover:text-goldAccent transition-colors">Reservar</a>
-                <a href="#ubicacion" class="mobile-link py-2 hover:text-goldAccent transition-colors">Ubicación</a>
-            </nav>
+        <div id="mobile-menu" class="fixed inset-0 bg-[#F5F1EA] flex flex-col justify-center items-center space-y-8 opacity-0 pointer-events-none transition-all duration-300 z-40">
+            <a href="#inicio" class="mobile-link font-['Playfair_Display'] text-2xl text-[#2E2E2E] hover:text-[#6B4F3A]">Inicio</a>
+            <a href="#servicios" class="mobile-link font-['Playfair_Display'] text-2xl text-[#2E2E2E] hover:text-[#6B4F3A]">Tratamientos</a>
+            <a href="#galeria" class="mobile-link font-['Playfair_Display'] text-2xl text-[#2E2E2E] hover:text-[#6B4F3A]">Galería</a>
+            <a href="#elegirnos" class="mobile-link font-['Playfair_Display'] text-2xl text-[#2E2E2E] hover:text-[#6B4F3A]">Nosotros</a>
+            <a href="#contacto" class="mobile-link font-['Playfair_Display'] text-2xl text-[#2E2E2E] hover:text-[#6B4F3A]">Contacto</a>
+            <a href="#reservas" class="mobile-link bg-[#6B4F3A] text-white px-8 py-3 text-sm tracking-widest uppercase rounded-sm">Reservar Cita</a>
         </div>
     </header>
 
-    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-pastelPink/30 via-cream to-cream">
-        <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
-            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-goldAccent mb-4 block">Bienvenido a Royal Beauty Center</span>
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-darkGrey tracking-wide leading-tight mb-8">
-                Estética de precisión para potenciar tu <span class="italic font-light text-goldAccent">belleza natural</span>
+    <section id="inicio" class="relative h-screen w-full flex items-center overflow-hidden bg-[#F5F1EA]">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1920&q=80" alt="Interior lujoso de Royal Beauty Centre" class="w-full h-full object-cover img-zoom-slow opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#FCFBF8]/90 via-[#FCFBF8]/40 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full slice-up-init animate-slide-up">
+            <span class="text-xs uppercase tracking-widest text-[#6B4F3A] font-semibold block mb-3">Bienvenidos al bienestar exclusivo</span>
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-6xl lg:text-7xl max-w-3xl leading-tight mb-6 text-[#2E2E2E]">
+                Realza tu belleza con <span class="italic text-[#355C7D]">tratamientos</span> profesionales
             </h1>
-            <p class="text-base md:text-lg text-darkGrey/70 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-                Descubre un oasis de cuidado personal y bienestar en Arganda del Rey. Nos especializamos en tratamientos avanzados diseñados para resaltar tu esencia con honestidad y sofisticación.
+            <p class="font-['Inter'] text-sm md:text-base max-w-lg text-[#2E2E2E]/80 mb-8 font-light leading-relaxed">
+                Un oasis de calma y sofisticación diseñado para revitalizar tu piel, cuerpo y mente con las técnicas más avanzadas del sector cosmético.
             </p>
-            <a href="#reservar" class="inline-block bg-goldAccent text-white px-8 py-4 rounded-sm tracking-wider uppercase text-xs font-semibold hover:bg-darkGrey transition-colors duration-300 shadow-md">
-                Reservar tu Cita
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#reservas" class="bg-[#6B4F3A] text-white text-center px-8 py-4 text-xs tracking-widest uppercase hover:bg-[#355C7D] transition-all duration-300 rounded-sm shadow-sm">Reservar cita</a>
+                <a href="#servicios" class="border border-[#6B4F3A] text-[#6B4F3A] text-center px-8 py-4 text-xs tracking-widest uppercase hover:bg-[#6B4F3A] hover:text-white transition-all duration-300 rounded-sm">Ver tratamientos</a>
+            </div>
         </div>
     </section>
 
-    <section id="precios" class="py-20 md:py-28 bg-white">
+    <section id="elegirnos" class="py-24 bg-[#FCFBF8]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="reveal-item flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#F5F1EA] mb-4 text-[#355C7D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                    </div>
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold mb-2">Productos Premium</h3>
+                    <p class="text-xs text-[#2E2E2E]/75 leading-relaxed">Formulaciones exclusivas de alta gama cosmética internacional.</p>
+                </div>
+                <div class="reveal-item flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#F5F1EA] mb-4 text-[#355C7D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a2.25 2.25 0 01-3.182-3.182l3.277-3.276a4.5 4.5 0 00-6.336 4.486c.091.58.065 1.193-.14 1.743m-2.04 2.088c-.55.164-1.163.188-1.743.14a4.5 4.5 0 00-4.486 6.336l3.276-3.277a2.25 2.25 0 013.182 3.182l-3.277 3.276a4.5 4.5 0 006.336-4.486c-.091-.58-.065-1.193.14-1.743m-2.04 2.088l-3.159-3.159" /></svg>
+                    </div>
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold mb-2">Técnicas Avanzadas</h3>
+                    <p class="text-xs text-[#2E2E2E]/75 leading-relaxed">Metodologías de vanguardia en constante renovación.</p>
+                </div>
+                <div class="reveal-item flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#F5F1EA] mb-4 text-[#355C7D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                    </div>
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold mb-2">Atención Personalizada</h3>
+                    <p class="text-xs text-[#2E2E2E]/75 leading-relaxed">Cada diagnóstico y protocolo se adapta estrictamente a ti.</p>
+                </div>
+                <div class="reveal-item flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#F5F1EA] mb-4 text-[#355C7D]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75Y21m-6-9V3.75m0 9a3.75 3.75 0 100-7.5M12 3h.008v.008H12V3zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM12 6h.008v.008H12V6zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
+                    </div>
+                    <h3 class="font-['Playfair_Display'] text-lg font-semibold mb-2">Higiene Garantizada</h3>
+                    <p class="text-xs text-[#2E2E2E]/75 leading-relaxed">Protocolos de esterilización e higienización médica rigurosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-[#F5F1EA]/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl text-darkGrey mb-4">Nuestros Tratamientos</h2>
-                <div class="w-12 h-[2px] bg-goldAccent mx-auto"></div>
+                <span class="text-xs tracking-widest uppercase text-[#6B4F3A] font-semibold block mb-2">Nuestras Especialidades</span>
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl text-[#2E2E2E]">Tratamientos de Autor</h2>
+                <div class="w-12 h-[1px] bg-[#6B4F3A] mx-auto mt-4"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Manicura Semipermanente</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">20€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Esmaltado de larga duración con brillo impecable.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="services-container">
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df4906b121ae?auto=format&fit=crop&w=600&q=80" alt="Tratamiento de Manicura" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Manicura Semipermanente" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Manicura Premium</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Cuidado completo de uñas y cutículas, exfoliación profunda e hidratación con aceites esenciales.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">35€</span>
+                            <button onclick="selectService('Manicura Premium')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Uñas Sistema Acrygel/Gel</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">45€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Construcción y alargamiento de alta resistencia.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c9?auto=format&fit=crop&w=600&q=80" alt="Tratamiento de Pedicura" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Uñas Sistema Acrygel/Gel" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Pedicura Spa</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Tratamiento relajante en pozo podal hidromasaje, remoción de asperezas y mascarilla nutritiva.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">45€</span>
+                            <button onclick="selectService('Pedicura Spa')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Pedicura Completa Royal</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">35€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Tratamiento profundo de hidratación y esmaltado.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=600&q=80" alt="Extensiones de pestañas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Pedicura Completa Royal" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Extensiones de Pestañas</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Aplicación pelo a pelo efecto seda. Mirada voluminosa, definida y completamente natural.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">75€</span>
+                            <button onclick="selectService('Extensiones de Pestañas')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Extensión de Pestañas (Pelo a Pelo)</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">50€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Mirada intensa con acabado natural.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Diseño de cejas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Extensión de Pestañas (Pelo a Pelo)" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Diseño de Cejas con Henna</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Estudio visajista y sombreado orgánico para definir un marco facial armónico y elegante.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">25€</span>
+                            <button onclick="selectService('Diseño de Cejas con Henna')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Diseño de Cejas con Hilo + Tinte</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">18€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Definición y simetría facial personalizada.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80" alt="Limpieza facial" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Diseño de Cejas con Hilo + Tinte" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Limpieza Facial Oxigenante</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Extracción ultrasónica, peeling enzimático e infusión profunda de vitaminas e hialurónico.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">60€</span>
+                            <button onclick="selectService('Limpieza Facial Oxigenante')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Higiene Facial Avanzada K-Beauty</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">40€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">Luminosidad y nutrición con técnicas coreanas.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Masajes de relajacion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Higiene Facial Avanzada K-Beauty" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Masaje Aromaterapéutico</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Masaje corporal completo descontracturante y relajante con óleos botánicos templados.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">55€</span>
+                            <button onclick="selectService('Masaje Aromaterapéutico')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 md:col-span-2 lg:col-span-3">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-serif text-xl text-darkGrey pr-4">Masaje Descontracturante / Relajante</h3>
-                            <span class="font-serif text-xl text-goldAccent font-semibold shrink-0">45€</span>
-                        </div>
-                        <p class="text-sm text-darkGrey/70 font-light mb-6">50 minutos de bienestar absoluto con quiromasajista especializado para aliviar cuerpo y mente.</p>
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522337094133-f6750a22a493?auto=format&fit=crop&w=600&q=80" alt="Micropigmentacion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <a href="#reservar" data-service="Masaje Descontracturante / Relajante" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Micropigmentación Labial</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Efecto acuarela permanente para restaurar la simetría y el color natural de los labios.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">220€</span>
+                            <button onclick="selectService('Micropigmentación Labial')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-item bg-[#FCFBF8] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Depilación facial" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between h-56">
+                        <div>
+                            <h3 class="font-['Playfair_Display'] text-xl text-[#2E2E2E] mb-2 font-semibold">Depilación Facial con Hilo</h3>
+                            <p class="text-xs text-[#2E2E2E]/75 font-light line-clamp-2">Técnica sutil e hipoalergénica para el rostro completo, previniendo la flacidez dérmica.</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-sm font-semibold text-[#6B4F3A]">18€</span>
+                            <button onclick="selectService('Depilación Facial con Hilo')" class="text-xs tracking-wider uppercase font-semibold text-[#355C7D] hover:text-[#6B4F3A] transition-colors duration-200">Reservar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reservar" class="py-20 md:py-28 bg-pastelPink/40">
-        <div class="max-w-xl mx-auto px-6">
-            <div class="bg-white p-8 md:p-10 rounded-sm card-shadow border border-pastelPink">
-                <div class="text-center mb-8">
-                    <h2 class="font-serif text-2xl md:text-3xl text-darkGrey mb-2">Solicitar tu Cita</h2>
-                    <p class="text-sm text-darkGrey/60 font-light">Completa tus datos para confirmar disponibilidad por WhatsApp.</p>
+    <section id="galeria" class="py-24 bg-[#FCFBF8]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <span class="text-xs tracking-widest uppercase text-[#6B4F3A] font-semibold block mb-2">Instalaciones y Resultados</span>
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl text-[#2E2E2E]">Un Refugio de Elegancia</h2>
+                <div class="w-12 h-[1px] bg-[#6B4F3A] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=600&q=80" alt="Detalle clínico spa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=80" alt="Sesión de cuidados faciales" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Piedras calientes de masaje" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=1200&q=80" alt="Detalle de manicura de diseño" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1516238840914-94dfc0c873ae?auto=format&fit=crop&w=600&q=80" alt="Cabina aromática de tratamiento" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+                <div class="reveal-item overflow-hidden relative h-72 group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Tratamiento de mascarilla avanzada" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#355C7D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#F5F1EA]/30 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center relative">
+            <span class="text-2xl font-['Playfair_Display'] text-[#355C7D] block mb-4">“</span>
+            
+            <div class="relative h-48 sm:h-40 md:h-36">
+                <div class="testimonial-slide absolute inset-0 transition-opacity duration-1000 opacity-100 flex flex-col items-center">
+                    <p class="font-['Playfair_Display'] italic text-base md:text-xl text-[#2E2E2E] max-w-2xl mb-6">
+                        "La atención al detalle en Royal Beauty es de otro nivel. Salgo completamente renovada de mi limpieza facial y el trato de todo el personal es exquisito."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Valeria Gómez" class="w-10 h-10 rounded-full object-cover">
+                        <div class="text-left">
+                            <h4 class="text-xs uppercase tracking-wider font-semibold">Valeria Gómez</h4>
+                            <div class="text-amber-500 text-xs">★★★★★</div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="testimonial-slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex flex-col items-center">
+                    <p class="font-['Playfair_Display'] italic text-base md:text-xl text-[#2E2E2E] max-w-2xl mb-6">
+                        "Las extensiones de pestañas son finas, elegantes y duraderas. El espacio minimalista te sumerge en una calma total."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Beatriz Mendoza" class="w-10 h-10 rounded-full object-cover">
+                        <div class="text-left">
+                            <h4 class="text-xs uppercase tracking-wider font-semibold">Beatriz Mendoza</h4>
+                            <div class="text-amber-500 text-xs">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="py-24 bg-[#FCFBF8]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <div class="reveal-item flex flex-col justify-between">
+                <div>
+                    <span class="text-xs tracking-widest uppercase text-[#6B4F3A] font-semibold block mb-2">Disponibilidad Exclusiva</span>
+                    <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl text-[#2E2E2E] mb-6">Planifica tu Momento</h2>
+                    <p class="text-sm font-light text-[#2E2E2E]/80 mb-8 leading-relaxed">
+                        Para preservar la máxima exclusividad y la atmósfera de absoluta relajación de nuestro centro, trabajamos bajo un riguroso sistema de cita previa coordinada de manera directa.
+                    </p>
+                    
+                    <div class="bg-[#F5F1EA] p-8 rounded-sm space-y-4">
+                        <h3 class="font-['Playfair_Display'] text-lg font-semibold text-[#6B4F3A] mb-2">Horarios de Apertura</h3>
+                        <div class="flex justify-between border-b border-[#6B4F3A]/10 pb-2 text-xs">
+                            <span>Martes a Viernes</span>
+                            <span class="font-medium">10:15 - 19:00</span>
+                        </div>
+                        <div class="flex justify-between border-b border-[#6B4F3A]/10 pb-2 text-xs">
+                            <span>Sábados</span>
+                            <span class="font-medium">10:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-[#2E2E2E]/50">
+                            <span>Domingo y Lunes</span>
+                            <span class="font-medium uppercase">Cerrado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-[#F5F1EA] text-xs text-[#2E2E2E]/60">
+                    <p>📍 Dirección: Calle Miralparque 13, Arganda del Rey, Madrid.</p>
+                </div>
+            </div>
+
+            <div class="reveal-item bg-[#F5F1EA]/40 p-8 md:p-12 rounded-xl border border-[#F5F1EA]">
                 <form id="appointment-form" class="space-y-6">
                     <div>
-                        <label for="name" class="block text-xs uppercase tracking-wider font-semibold text-darkGrey mb-2">Nombre completo</label>
-                        <input type="text" id="name" required class="w-full bg-cream border border-pastelPink focus:border-goldAccent focus:outline-none rounded-sm px-4 py-3 text-sm text-darkGrey" placeholder="Ej. María García">
+                        <label for="name" class="block text-xs uppercase tracking-wider text-[#2E2E2E] mb-2">Nombre Completo *</label>
+                        <input type="text" id="name" required class="w-full bg-[#FCFBF8] border border-transparent focus:border-[#6B4F3A] rounded-sm px-4 py-3 text-sm outline-none transition-all duration-200" placeholder="Ej. Ana García">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-xs uppercase tracking-wider text-[#2E2E2E] mb-2">Teléfono Móvil *</label>
+                        <input type="tel" id="phone" required class="w-full bg-[#FCFBF8] border border-transparent focus:border-[#6B4F3A] rounded-sm px-4 py-3 text-sm outline-none transition-all duration-200" placeholder="Ej. 612345678">
                     </div>
 
                     <div>
-                        <label for="treatment" class="block text-xs uppercase tracking-wider font-semibold text-darkGrey mb-2">Seleccionar Tratamiento</label>
-                        <select id="treatment" required class="w-full bg-cream border border-pastelPink focus:border-goldAccent focus:outline-none rounded-sm px-4 py-3 text-sm text-darkGrey">
-                            <option value="" disabled selected>Elige un servicio...</option>
-                            <option value="Manicura Semipermanente">Manicura Semipermanente</option>
-                            <option value="Uñas Sistema Acrygel/Gel">Uñas Sistema Acrygel/Gel</option>
-                            <option value="Pedicura Completa Royal">Pedicura Completa Royal</option>
-                            <option value="Extensión de Pestañas (Pelo a Pelo)">Extensión de Pestañas (Pelo a Pelo)</option>
-                            <option value="Diseño de Cejas con Hilo + Tinte">Diseño de Cejas con Hilo + Tinte</option>
-                            <option value="Higiene Facial Avanzada K-Beauty">Higiene Facial Avanzada K-Beauty</option>
-                            <option value="Masaje Descontracturante / Relajante">Masaje Descontracturante / Relajante</option>
+                        <label for="treatment" class="block text-xs uppercase tracking-wider text-[#2E2E2E] mb-2">Tratamiento *</label>
+                        <select id="treatment" required class="w-full bg-[#FCFBF8] border border-transparent focus:border-[#6B4F3A] rounded-sm px-4 py-3 text-sm outline-none transition-all duration-200">
+                            <option value="">Selecciona una opción</option>
+                            <option value="Manicura Premium">Manicura Premium - 35€</option>
+                            <option value="Pedicura Spa">Pedicura Spa - 45€</option>
+                            <option value="Extensiones de Pestañas">Extensiones de Pestañas - 75€</option>
+                            <option value="Diseño de Cejas con Henna">Diseño de Cejas con Henna - 25€</option>
+                            <option value="Limpieza Facial Oxigenante">Limpieza Facial Oxigenante - 60€</option>
+                            <option value="Masaje Aromaterapéutico">Masaje Aromaterapéutico - 55€</option>
+                            <option value="Micropigmentación Labial">Micropigmentación Labial - 220€</option>
+                            <option value="Depilación Facial con Hilo">Depilación Facial con Hilo - 18€</option>
                         </select>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label for="date" class="block text-xs uppercase tracking-wider font-semibold text-darkGrey mb-2">Fecha deseada</label>
-                            <input type="date" id="date" required class="w-full bg-cream border border-pastelPink focus:border-goldAccent focus:outline-none rounded-sm px-4 py-3 text-sm text-darkGrey">
+                            <label for="date" class="block text-xs uppercase tracking-wider text-[#2E2E2E] mb-2">Fecha *</label>
+                            <input type="date" id="date" required class="w-full bg-[#FCFBF8] border border-transparent focus:border-[#6B4F3A] rounded-sm px-4 py-3 text-sm outline-none transition-all duration-200">
                         </div>
                         <div>
-                            <label for="time" class="block text-xs uppercase tracking-wider font-semibold text-darkGrey mb-2">Hora deseada</label>
-                            <input type="time" id="time" required class="w-full bg-cream border border-pastelPink focus:border-goldAccent focus:outline-none rounded-sm px-4 py-3 text-sm text-darkGrey">
+                            <label for="time" class="block text-xs uppercase tracking-wider text-[#2E2E2E] mb-2">Hora Disponible *</label>
+                            <select id="time" required disabled class="w-full bg-[#FCFBF8] border border-transparent focus:border-[#6B4F3A] rounded-sm px-4 py-3 text-sm outline-none transition-all duration-200 disabled:opacity-50">
+                                <option value="">Elige una fecha primero</option>
+                            </select>
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-goldAccent text-white py-4 rounded-sm uppercase tracking-widest text-xs font-semibold hover:bg-darkGrey transition-colors duration-300 shadow-md flex items-center justify-center gap-2 mt-4">
-                        <i class="fa-brands fa-whatsapp text-base"></i> Confirmar y Solicitar Cita
+                    <div id="form-message" class="hidden text-xs font-medium px-4 py-2 bg-red-100 text-red-700 rounded-sm"></div>
+
+                    <button type="submit" class="w-full bg-[#355C7D] text-white py-4 text-xs tracking-widest uppercase hover:bg-[#6B4F3A] transition-all duration-300 rounded-sm font-semibold shadow-sm flex items-center justify-center gap-2">
+                        Reservar por WhatsApp
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="ubicacion" class="py-20 bg-cream border-t border-pastelPink/50">
-        <div class="max-w-7xl mx-auto px-6 text-center space-y-6">
-            <h2 class="font-serif text-3xl text-darkGrey">Visítanos</h2>
-            <div class="w-12 h-[2px] bg-goldAccent mx-auto"></div>
+    <section id="contacto" class="w-full h-96 bg-[#F5F1EA] relative">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.649175510619!2d-3.4475470000000003!3d40.283526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42397943d2dbb5%3A0x7d6f5f3e4ff3a649!2sCalle%20Miralparque%2C%2013%2C%2028500%20Arganda%20del%20Rey%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" 
+            class="w-full h-full border-0 filter grayscale contract-125" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Royal Beauty Centre en Arganda del Rey">
+        </iframe>
+    </section>
+
+    <footer class="bg-[#2E2E2E] text-[#FCFBF8] py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-[#FCFBF8]/10 pb-12">
             
-            <div class="flex flex-col md:flex-row justify-center gap-10 md:gap-20 mt-10">
-                <div>
-                    <h4 class="font-medium text-darkGrey uppercase tracking-wider text-xs mb-2">Dirección</h4>
-                    <p class="text-sm font-light">Calle Miralparque 13<br>28500 Arganda del Rey, Madrid</p>
-                </div>
-                <div>
-                    <h4 class="font-medium text-darkGrey uppercase tracking-wider text-xs mb-2">Horario</h4>
-                    <p class="text-sm font-light">Martes a Viernes: 10:15 - 19:00<br>Sábados: 10:00 - 18:00</p>
+            <div class="space-y-4">
+                <h3 class="font-['Playfair_Display'] text-xl tracking-wide text-[#F5F1EA]">Royal Beauty Centre</h3>
+                <p class="text-xs text-[#FCFBF8]/60 font-light leading-relaxed">Alta estética y cuidados avanzados orientados a la elegancia individual.</p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-[#F5F1EA]">Horario</h4>
+                <p class="text-xs text-[#FCFBF8]/60 font-light">Martes a Viernes: 10:15 - 19:00</p>
+                <p class="text-xs text-[#FCFBF8]/60 font-light">Sábados: 10:00 - 18:00</p>
+                <p class="text-xs text-[#FCFBF8]/60 font-light">Domingo y Lunes: Cerrado</p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-[#F5F1EA]">Contacto</h4>
+                <p class="text-xs text-[#FCFBF8]/60 font-light">📞 Teléfono: +34 614 41 01 99</p>
+                <p class="text-xs text-[#FCFBF8]/60 font-light">💬 WhatsApp: +34 614 41 01 99</p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-[#F5F1EA]">Síguenos</h4>
+                <div class="flex space-x-4 text-xs font-light text-[#FCFBF8]/60">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#F5F1EA]">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#F5F1EA]">Facebook</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <footer class="bg-darkGrey text-cream/60 text-xs py-10 border-t border-darkGrey text-center">
-        <p>© 2026 Royal Beauty Center. Todos los derechos reservados.</p>
+        <div class="max-w-7xl mx-auto px-6 pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-[#FCFBF8]/40">
+            <p>&copy; 2026 Royal Beauty Centre. Todos los derechos reservados.</p>
+            <p class="mt-2 sm:mt-0 font-light">Inspiración de Lujo & Bienestar Profesional</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
