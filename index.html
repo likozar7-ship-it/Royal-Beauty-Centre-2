@@ -6,36 +6,14 @@
     <title>Royal Beauty Center | Estética de Precisión en Arganda del Rey</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#FAFAF6',
-                        pastelPink: '#F3E8EE',
-                        goldAccent: '#D4AF37',
-                        darkGrey: '#2C2C2C'
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Inter"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    
+    <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        .card-shadow {
-            box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.08);
-        }
-    </style>
 </head>
 <body class="bg-cream text-darkGrey font-sans antialiased selection:bg-pastelPink selection:text-darkGrey">
 
@@ -87,7 +65,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-xl mx-auto mb-16">
                 <h2 class="font-serif text-3xl md:text-4xl text-darkGrey mb-4">Nuestros Tratamientos</h2>
-                <div class="w-12 h-[2px] bg-goldAccent mx-auto mb-4"></div>
+                <div class="w-12 h-[2px] bg-goldAccent mx-auto"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,7 +77,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Esmaltado de larga duración con brillo impecable.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Manicura Semipermanente')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Manicura Semipermanente" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
@@ -110,7 +88,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Construcción y alargamiento de alta resistencia.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Uñas Sistema Acrygel/Gel')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Uñas Sistema Acrygel/Gel" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
@@ -121,7 +99,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Tratamiento profundo de hidratación y esmaltado.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Pedicura Completa Royal')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Pedicura Completa Royal" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
@@ -132,7 +110,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Mirada intensa con acabado natural.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Extensión de Pestañas (Pelo a Pelo)')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Extensión de Pestañas (Pelo a Pelo)" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
@@ -143,7 +121,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Definición y simetría facial personalizada.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Diseño de Cejas con Hilo + Tinte')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Diseño de Cejas con Hilo + Tinte" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
@@ -154,7 +132,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">Luminosidad y nutrición con técnicas coreanas.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Higiene Facial Avanzada K-Beauty')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Higiene Facial Avanzada K-Beauty" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
 
                 <div class="bg-cream p-8 rounded-sm border border-pastelPink/50 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 md:col-span-2 lg:col-span-3">
@@ -165,7 +143,7 @@
                         </div>
                         <p class="text-sm text-darkGrey/70 font-light mb-6">50 minutos de bienestar absoluto con quiromasajista especializado para aliviar cuerpo y mente.</p>
                     </div>
-                    <a href="#reservar" onclick="selectService('Masaje Descontracturante / Relajante')" class="text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
+                    <a href="#reservar" data-service="Masaje Descontracturante / Relajante" class="btn-select-service text-xs uppercase tracking-widest font-semibold text-darkGrey hover:text-goldAccent transition-colors">Reservar <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i></a>
                 </div>
             </div>
         </div>
@@ -240,53 +218,6 @@
         <p>© 2026 Royal Beauty Center. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        // Lógica del Menú Móvil
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Pre-selección de tratamientos desde las tarjetas
-        function selectService(serviceName) {
-            const selectElement = document.getElementById('treatment');
-            if (selectElement) selectElement.value = serviceName;
-        }
-
-        // Lógica de validación e integración con WhatsApp
-        const form = document.getElementById('appointment-form');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value.trim();
-            const treatment = document.getElementById('treatment').value;
-            const dateInput = document.getElementById('date').value;
-            const time = document.getElementById('time').value;
-            
-            // Formatear Fecha (DD/MM/YYYY)
-            let formattedDate = dateInput;
-            if (dateInput) {
-                const dateParts = dateInput.split('-');
-                formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
-            }
-
-            // Crear el mensaje dinámico
-            const baseMessage = `Hola Royal Beauty Center, me gustaría solicitar una cita. Mi nombre es ${name}. Quiero el tratamiento de ${treatment} para el día ${formattedDate} a las ${time}.`;
-            
-            // Codificar para URL
-            const encodedMessage = encodeURIComponent(baseMessage);
-            
-            // Redirigir a WhatsApp (Usamos API wa.me)
-            window.open(`https://wa.me/34614410199?text=${encodedMessage}`, '_blank');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
